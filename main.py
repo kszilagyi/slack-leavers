@@ -36,7 +36,8 @@ if channel_id is None:
     exit(1)
 
 print("Channel id is %s" % channel_id)
-# todo this API is paged but we only do the first page. It should be OK for low volume channels if the interval is not too high
+# todo this API is paged but we only do the first page.
+# It should be OK for low volume channels if the interval is not too high
 all_events = sc.api_call("channels.history",
                          channel=channel_id,
                          count=1000)
