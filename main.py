@@ -67,4 +67,4 @@ resolved_left_and_didnt_come_back = [sc.api_call("users.info",
 
 without_deleted = [user['profile']['email'] for user in resolved_left_and_didnt_come_back if not user['deleted']]
 
-print(without_deleted)
+print(', '.join(without_deleted))
